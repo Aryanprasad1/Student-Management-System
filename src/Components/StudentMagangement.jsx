@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import "/public/Static/CSS/style.css"
-import addCustomerOnTheBasedTheirIdNameHobbiesMob, { deleteStudentBasedOnId,  modifyCustomerBasedOnId, searchStudentBasedOnId, studentArray } from '../BLL/function';
+import addCustomerOnTheBasedTheirIdNameHobbiesMob, { deleteStudentBasedOnId, modifyStudentBasedOnId, searchStudentBasedOnId, studentArray } from '../BLL/function';
 
 import DisplayStudent from './DisplayStudent';
+
 function StudentMagangement() {
 const[stateVariableId,setStateVariableId]=useState();
 const[stateVariableName,setStateVariableName]=useState();
@@ -44,9 +45,10 @@ setStateVariableArray([...studentArray])
     
  }
  function modifyCustomer_onClick(e){
-  modifyCustomerBasedOnId(stateVariableId);
-  alert ("modify Successfully")
-  setStateVariableArray([...studentArray]);
+ modifyStudentBasedOnId(stateVariableId);
+ 
+ 
+   alert ("modify Successfully")
  }
  
     return (
